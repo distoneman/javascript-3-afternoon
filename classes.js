@@ -136,7 +136,9 @@ class ProgressiveManager {
 
   titleCheck(){
     let numEmp = this.reports.length 
-    if(numEmp > 0 && numEmp < 4){
+    if(numEmp === 0){
+      this.title = 'Not a manager'
+    } else if(numEmp > 0 && numEmp < 4){
       this.title = 'Barely Manager'
     } else if(numEmp >3 && numEmp < 11){
       this.title = 'Mostly Manager'
